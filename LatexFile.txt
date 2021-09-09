@@ -1,0 +1,42 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{isLeapYear}
+\author{Jacob Bentsen}
+
+\begin{document}
+\maketitle
+
+\begin{figure}
+\centering
+\includegraphics[width=0.4\textwidth]{Skærmbillede 2021-09-09 kl. 23.04.25.png}
+\caption{\label{fig:diagram}Diagram of the algorithm }
+\end{figure}
+
+\section{Introduction to algorithm}
+
+My algorithm evaluates whether or not the input year is a leap year. It does this by first checking for the input mod(4) if this is not 0 the year is not a leap year and that conclusion is printed in the terminal. 
+
+
+If the input mod(4) is equal to 0 the algorithm needs to check further and then checks for its mod(100) if this is not 0 the year is in fact a leap year and that fact is printed in the terminal.
+If it were equal to 0 the algorithm needs to check further and then checks if the input mod(400) is equal to 0. 
+
+
+
+if it is input is in fact a leap year and this is printed but if it is not equal to 0 it is not a leap year and this is printed. On the next page you can find a Diagram of the algorithm 
+
+
+
+\end{document}

@@ -8,16 +8,30 @@ namespace MyFirstCs
         static void Main(string[] args)
         {
             string val;
-            Console.Write("Enter integer to check for leap year: ");
+            Console.Write("Enter a year after 1582 to check for leap year: ");
             val = Console.ReadLine();
-            int a = Convert.ToInt32(val);
-            if (isLeapYear(a)){
-                Console.Write("yay");
-            } else
+            try
             {
+                 int a = Convert.ToInt32(val);
+                if (a<1582) {
+                    throw new OverflowException();
+                }
+                if (isLeapYear(a)){
+                    Console.Write("yay");
+                } else  {
                 Console.Write("nay");
+                }
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("your number is too large or too small");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("this is not a proper format");
             }
         }
+            
 
         public static bool isLeapYear(int year) {
             if (year%4==0)
